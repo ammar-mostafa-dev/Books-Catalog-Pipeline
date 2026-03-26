@@ -49,7 +49,7 @@ The pipeline is engineered to extract **99% of the available catalog attributes*
 
 ### **1. Clone The Repository**
 ```
-git clone [https://github.com/ammar-mostafa-dev/books-catalog-pipeline](https://github.com/ammar-mostafa-dev/Books-Catalog-Pipeline)
+git clone https://github.com/ammar-mostafa-dev/Books-Catalog-Pipeline
 cd Books-Catalog-Pipeline
 ```
 ### **2. Set Up Virtual Environment ** 
