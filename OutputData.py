@@ -18,11 +18,14 @@ def save_row_to_csv(data_dict, filename="books_data.csv"):
 
 
 
-def convert_csv_to_excel(csv_filename="books_data.csv", excel_filename="books_data.xlsx"):
+def convert_csv_to_excel(csv_filename="books_data.csv", excel_filename="Books_Master_Catalog.xlsx"):
     """Converts the final CSV into a professional Excel file."""
     try:
         # Read the finished CSV
         df = pd.read_csv(csv_filename)
+        # modify headers
+        headers_modified = {'title':'Title','description':'Description','category':'Category','rating':'Rating','url':'Source Url','price including tax':'Price Including Tax','price excluding tax':'Price Excluding Tax','tax':'Tax','stock availability':'Stock Availability','quantity':'Quantity'}
+        df.rename(columns=headers_modified,inplace=True)
         # Export to Excel
         df.to_excel(excel_filename, index=False)
         logger.info(f"Successfully converted to Excel: {excel_filename}")
